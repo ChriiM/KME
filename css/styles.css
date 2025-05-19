@@ -648,7 +648,7 @@ h2 {
 
 .cta-section {
   position: relative;
-  background-image: url('../assets/kme.png'); /* fondo general de la sección */
+  background-image: url('../assets/kme.png');
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
