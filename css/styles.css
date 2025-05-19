@@ -890,7 +890,7 @@ form button:hover {
 /* FOOTER */
 .footer {
   background-color: #111;
-  background-image: url(./assets/map.png);
+  background-image: url(../assets/map.png);
   background-size: cover;
   color: #eee;
   padding: 60px 20px 30px;
