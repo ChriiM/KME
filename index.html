@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   
   <link rel="icon" type="image/png" href="/KME/assets/logo.png" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -146,6 +147,37 @@
     </div>
   </section>
 
+  <section id="oficinas-kme" style="height: 700px; width: 100%; background-color: rgb(41, 41, 41);" data-aos="fade-up">
+    <h2 style="color:white; font-size: 2.8rem;
+  margin-bottom: 20px;
+  text-shadow: 
+    0 0 5px #ff6f00,
+    0 0 10px #ff6f00,
+    0 0 20px #ffa726,
+    0 0 30px #ff8c00;">OFICINAS GLOBALES</h2>
+  <div id="mapa-kme" style="height: 100%; width: 100%;"></div>
+
+ <div class="ofe">
+  <img src="/KME/assets/pattern.jpg" alt="Logo de KME International S.A." class="logo" />
+  <div class="ofe-overlay">
+    <div class="stat">
+      <i class="fas fa-globe-americas icon"></i>
+      <div class="number" data-target="180">0</div>
+      <div class="label">Países</div>
+    </div>
+    <div class="stat">
+      <i class="fas fa-building icon"></i>
+      <div class="number" data-target="120">0</div>
+      <div class="label">Oficinas</div>
+    </div>
+    <div class="stat">
+      <i class="fas fa-warehouse icon"></i>
+      <div class="number" data-target="70">0</div>
+      <div class="label">Warehouses</div>
+    </div>
+  </div>
+</div>
+</section>
 <section class="cta-section" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
   <div class="overlay">
     <div class="content">
@@ -261,5 +293,6 @@
     AOS.init();
   </script>
   <script src="js/main.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
 </html>
