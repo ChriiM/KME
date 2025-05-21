@@ -36,206 +36,7 @@ body {
 }
 
 
-/* NAVBAR */
-.navbar {
-  background-color: rgba(255, 255, 255, 0.1); /* leve transparencia */
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 15px 0;
-}
 
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
-.logo {
-  height: 50px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #fff;
-}
-
-.cta-button {
-  background-color: #f38b00;
-  color: #fff !important; 
-  padding: 10px 20px;
-  font-weight: 600;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #e67e00;
-}
-
-.cta-button2 {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #ff6f0000;
-  color: #f38b00 ;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
-  border: #f38b00 1px solid;
-}
-
-.cta-button2:hover {
-  background-color: #e67e00;
-  font-weight: bold;
-}
-.cta-button3 {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #ff6f0000;
-  color: #f38b00;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
-  border: #f38b00 1px solid;
-}
-
-.cta-button3:hover {
-  background-color: #e67e00;
-  font-weight: bold;
-}
-.cta-button4 {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #ff6f0000;
-  color: #f38b00;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
-  border: #f38b00 1px solid;
-}
-
-.cta-button4:hover {
-  background-color: #e67e00;
-  font-weight: bold;
-}
-.cta-button5 {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #ff6f0000;
-  color: #f38b00;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
-  border: #f38b00 1px solid;
-}
-
-.cta-button5:hover {
-  background-color: #e67e00;
-  font-weight: bold;
-}
-
-/* MENÚ MÓVIL */
-.menu-toggle {
-display: none;
-flex-direction: column;
-justify-content: space-around;
-width: 30px;
-height: 22px;
-cursor: pointer;
-position: fixed;
-top: 20px;
-right: 20px;
-z-index: 1500;
-}
-
-.menu-toggle span {
-display: block;
-height: 4px;
-background: #f38b00;
-border-radius: 2px;
-}
-
-/* Estilo base del menú */
-.nav-links {
-  background: transparent;
-  transition: background 0.3s ease;
-  color: inherit;
-}
-
-/* Solo para pantallas móviles (ejemplo hasta 768px) */
-@media (max-width: 768px) {
-  .nav-links.open {
-    background: linear-gradient(135deg, rgba(51, 51, 51, 0.9), rgba(17, 17, 17, 0.9));
-    color: white;
-    transition: background 0.3s ease;
-  }
-
-  .nav-links.open a {
-    color: white;
-    transition: background 0.3s ease;
-  }
-
-  .nav-links.open a:hover,
-  .nav-links.open a:focus,
-  .nav-links.open a:active {
-    background: linear-gradient(135deg, rgba(255, 165, 0, 0.9), rgba(255, 140, 0, 0.9)); /* naranja con transparencia */
-    color: white;
-  }
-}
-
-
-/* NAV MOBILE */
-@media (max-width: 768px) {
-.nav-links {
-position: fixed;
-top: 0;
-right: -100%;
-height: 100vh;
-width: 250px;
-background: #fff;
-flex-direction: column;
-padding-top: 60px;
-gap: 40px;
-transition: right 0.3s ease;
-box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-z-index: 1400;
-}
-.nav-links.open {
-right: 0;
-}
-.nav-quote-desktop {
-display: none;
-}
-.menu-toggle {
-display: flex;
-}
-.nav-quote-mobile {
-margin-top: 20px;
-}
-}
 
 
 /* HERO */
@@ -395,15 +196,15 @@ h2 {
   padding: 25px;
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px); /* Glass effect */
+  backdrop-filter: blur(2px); /* Glass effect */
   -webkit-backdrop-filter: blur(10px); /* Safari support */
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   text-align: center;
   transition: all 0.4s ease;
   color: white;
   position: relative;
   overflow: hidden;
-  border: 2px solid #ff6f002c;
+  border: 4px solid #ff6f0034;
 }
 
 .servicio-card:hover {
@@ -1103,53 +904,34 @@ form button:hover {
   text-shadow: none;
 }
 
-.oficinas-kme {
-  height: 800px; 
-  width: 100%; 
-  background-color: rgb(41, 41, 41)
-}
 
 
-.oficinas-mapa {
-  background-color: #000000;
-  padding: 60px 20px;
-  color: #25d366;
-}
-
-#mapa-kme {
-  height: 100%;
+/* Estilo responsive para el contenedor del mapa */
+#mapa-kme.responsive-mapa {
   width: 100%;
+  max-width: 1200px;
+  height: 60vh;
+  min-height: 400px;
+  border-top: 4px solid #ff6f00;
+  border-bottom: 4px solid #ff6f00;
+  background-color: #000;
+  box-shadow: 0 0 15px rgba(255, 111, 0, 0.6);
+  border-radius: 12px;
   position: relative;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 4px solid #ff6f00;
-  border-bottom: 4px solid #ff6f00;
 }
 
-#map-container {
-  width: 600px;
-  height: 600px;
-    max-width: 90vw;
-    max-height: 90vw;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-#map {
-  width: 100%;
-  height: 100%;
-}
-
-  .leaflet-popup-content-wrapper {
-    background: #333 !important;
-    color: white !important;
-    border-radius: 10px !important;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+/* Ajustes para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  #mapa-kme.responsive-mapa {
+    width: 95%;
+    height: 50vh;
+    min-height: 300px;
   }
-
-  .leaflet-popup-tip {
-    background: #333 !important;
-  }
+}
 
 /* CSS */
 .ofe {
@@ -1157,6 +939,8 @@ form button:hover {
   width: 100%;
   height: 400px; /* Ajusta según tu diseño */
   overflow: hidden;
+  margin-top: 1px;
+  margin-bottom: -55px;
 }
 
 .ofe img {
@@ -1206,61 +990,254 @@ form button:hover {
   margin-top: 5px;
 }
 
-/* Contenedor joystick */
-.pan-buttons {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 140px;
-  height: 140px;
-  background: rgba(0,0,0,0.7);
-  border-radius: 50%;
-  box-shadow: 0 0 10px #ff6f00;
+
+/* Contenedor de las banderas */
+.language-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  user-select: none;
-  z-index: 9999; /* para que esté arriba del mapa */
+  margin: 10px 0 20px 0;
+  z-index: 1000;
 }
 
-/* Botones redondos */
-.pan-buttons button {
-  width: 40px;
-  height: 40px;
-  margin: 5px;
-  background-color: #ff6f00;
+/* Grupo de botones de idioma */
+.language-switcher {
+  display: flex;
+  gap: 10px;
+}
+
+/* Botón individual */
+.language-switcher button {
+  background: none;
   border: none;
-  border-radius: 50%;
-  color: black;
-  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 0;
 }
 
-.pan-buttons button:hover {
-  background-color: #ffa726;
+/* Imagen de la bandera */
+.language-switcher img {
+  width: 32px;
+  height: auto;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
 }
 
-/* Organizar botones para formar la cruz (joystick) */
-.pan-buttons > button:nth-child(1) { /* ↑ */
-  order: 1;
-  margin-bottom: 15px;
+.language-switcher img:hover {
+  transform: scale(1.1);
 }
 
-.pan-buttons > div {
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .language-container {
+    justify-content: flex-end;
+    margin: 10px 20px;
+  }
+
+  .language-switcher {
+    gap: 8px;
+  }
+
+  .language-switcher img {
+    width: 28px;
+  }
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.1); /* leve transparencia */
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 15px 0;
+}
+
+.navbar .container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  order: 2;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
-.pan-buttons > div > button {
-  margin: 0 10px;
+.logo {
+  height: 50px;
 }
 
-.pan-buttons > button:nth-child(4) { /* ↓ */
-  order: 3;
-  margin-top: 15px;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
 }
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.cta-button {
+  background-color: #f38b00;
+  color: #fff !important; 
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e67e00;
+}
+
+.cta-button2 {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ff6f0000;
+  color: #f38b00 ;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  border: #f38b00 1px solid;
+}
+
+.cta-button2:hover {
+  background-color: #e67e00;
+  font-weight: bold;
+}
+.cta-button3 {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ff6f0000;
+  color: #f38b00;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  border: #f38b00 1px solid;
+}
+
+.cta-button3:hover {
+  background-color: #e67e00;
+  font-weight: bold;
+}
+.cta-button4 {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ff6f0000;
+  color: #f38b00;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  border: #f38b00 1px solid;
+}
+
+.cta-button4:hover {
+  background-color: #e67e00;
+  font-weight: bold;
+}
+.cta-button5 {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ff6f0000;
+  color: #f38b00;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  border: #f38b00 1px solid;
+}
+
+.cta-button5:hover {
+  background-color: #e67e00;
+  font-weight: bold;
+}
+
+/* BOTÓN MENÚ MÓVIL (hamburguesa) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 4px;
+  background: #f38b00;
+  border-radius: 2px;
+}
+
+/* ESTILO BASE DEL NAV */
+.nav-links {
+  background: transparent;
+  transition: background 0.3s ease;
+  color: inherit;
+  display: flex;
+  gap: 30px;
+}
+
+/* NAV MÓVIL */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background: linear-gradient(135deg, rgba(51, 51, 51, 0.95), rgba(17, 17, 17, 0.95));
+    flex-direction: column;
+    padding-top: 80px;
+    gap: 40px;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1500;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links a {
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background: linear-gradient(135deg, rgba(255, 165, 0, 0.9), rgba(255, 140, 0, 0.9));
+    color: white;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-quote-desktop {
+    display: none;
+  }
+
+  .nav-quote-mobile {
+    margin-top: 20px;
+    display: block;
+  }
+}
+
