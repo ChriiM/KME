@@ -40,11 +40,12 @@ const map = L.map('mapa-kme', {
   worldCopyJump: true
 });
 
+map.touchZoom.disable();
+
 
 // Añadir capa base
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors',
-  maxZoom: 18
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles &copy; Esri'
 }).addTo(map);
 
 // Añadir solo UNA VEZ los controles de zoom
@@ -324,3 +325,156 @@ L.control.zoom({
       updateCount();
     });
   });
+
+
+
+  //TRADUCCCION
+
+const translations = {
+  es: {
+    
+     "hero.title": "Movilidad con Visión de Futuro",
+    "hero.text": "Somos el aliado estratégico que tu logística necesita.",
+    "hero.button": "Conocé nuestros servicios",
+    "video.unsupported": "Tu navegador no soporta videos HTML5.",
+
+    // Navbar
+    "navbar.servicios": "Servicios",
+    "navbar.porque": "¿Por qué elegirnos?",
+    "navbar.nosotros": "Nosotros",
+    "navbar.contacto": "Contacto",
+    "navbar.cotizacion": "Solicitar cotización",
+    "porque.title": "¿Por qué elegirnos?",
+    "porque.text": "Nuestros Clientes nos eligen por nuestra solidez operativa, atención cercana y capacidad de adaptación en un entorno dinámico. Trabajamos con altos estándares de calidad, priorizando la innovación, la transparencia y la excelencia en el servicio.",
+    "porque.benefit1": "Rapidez",
+    "porque.benefit2": "Transparencia",
+    "porque.benefit3": "Experiencia",
+    "porque.benefit4": "Atención personalizada",
+    "porque.benefit5": "Flexibilidad y adaptabilidad",
+    "porque.benefit6": "Seguridad en el transporte",
+    "porque.benefit7": "Optimización de costos",
+    "servicios.title": "Nuestros Servicios",
+    "servicios.description": "En KME INTERNATIONAL ofrecemos soluciones logísticas integrales, adaptadas a las necesidades específicas de tu negocio. Nuestro compromiso es acompañarte en cada etapa del proceso, asegurando eficiencia, trazabilidad y confianza desde el origen hasta el destino final. Con miles de operaciones exitosas y una red global de aliados, tu carga está en manos expertas.",
+    "servicios.land_title": "Transporte Terrestre",
+    "servicios.land_text": "Soluciones puerta a puerta con cobertura nacional e internacional. Coordinación, seguimiento y seguro del contenedor incluidos.",
+    "servicios.air_title": "Transporte Aéreo",
+    "servicios.air_text": "Tus cargas urgentes viajan con nosotros de forma rápida, segura y con visibilidad total. Ideal para operaciones que no pueden esperar.",
+    "servicios.sea_title": "Transporte Marítimo",
+    "servicios.sea_text": "Coordinamos importaciones y exportaciones con eficiencia, incluyendo asesoría en documentación y trámites aduaneros.",
+    "servicios.download_btn": "Descargar Brochure",
+    "Oficinas":"OFICINAS GLOBALES",
+    "Oficina":"Oficinas",
+    "Oficinas":"OFICINAS GLOBALES",
+    "Paises":"Paises",
+    "cta.title": "Agenda tu Reunión con KME",
+    "cta.description": "Agenda una reunión con cualquiera de nuestras sedes y recibe asesoramiento personalizado para tus necesidades de transporte y comercio exterior.",
+    "cta.select_service_label": "Seleccione el servicio*",
+    "cta.select_service_option": "Seleccione un servicio",
+    "cta.option_land": "Transporte Terrestre",
+    "cta.option_sea": "Transporte Marítimo",
+    "cta.option_air": "Transporte Aéreo",
+    "cta.select_office_label": "Seleccione una sede*",
+    "cta.select_office_option": "Seleccione una sede",
+    "cta.office_ba": "Capital Federal",
+    "cta.book_button": "Agendar reunión",
+     "contact.offices_title": "Nuestras oficinas",
+    "contact.office_ba": "Ciudad Autónoma de Buenos Aires",
+    "contact.office_address": "Av. Córdoba 632, Piso 8 of A C1054AAS Cdad. Autónoma de Buenos Aires",
+    "contact.form_title": "¿Querés decirnos algo?",
+    "contact.form_subtitle": "Completá el formulario y contactate con nosotros",
+    "contact.placeholder_name": "Nombre completo",
+    "contact.placeholder_email": "Email",
+    "contact.placeholder_message": "Mensaje",
+    "contact.submit_button": "Enviar",
+     "footer.description": "Soluciones en logística internacional, personalizadas para cada cliente.",
+    "footer.nav_title": "Navegación",
+    "footer.nav_home": "Inicio",
+    "footer.nav_services": "Servicios",
+    "footer.nav_about": "Nosotros",
+    "footer.nav_contact": "Contacto",
+    "footer.contact_title": "Contacto",
+    "footer.contact_address": "Buenos Aires: Av. Córdoba 632, Piso 8 of A C1054AAS Cdad. Autónoma de Buenos Aires",
+    "footer.contact_whatsapp": "Whatsapp: +54 9 11 2341-5533",
+    "footer.follow_us": "Seguinos",
+    "footer.rights": "&copy; 2025 KME International S.A. Todos los derechos reservados.",
+  },
+  en: {
+    "hero.title": "Mobility with a Vision for the Future",
+    "hero.text": "We are the strategic partner your logistics needs.",
+    "hero.button": "Explore our services",
+    "video.unsupported": "Your browser does not support HTML5 video.",
+
+    // Navbar
+    "navbar.servicios": "Services",
+    "navbar.porque": "Why choose us?",
+    "navbar.nosotros": "About us",
+    "navbar.contacto": "Contact",
+    "navbar.cotizacion": "Request a quote",
+    "porque.title": "Why choose us?",
+    "porque.text": "Our clients choose us for our operational strength, close attention, and adaptability in a dynamic environment. We work with high quality standards, prioritizing innovation, transparency, and service excellence.",
+    "porque.benefit1": "Speed",
+    "porque.benefit2": "Transparency",
+    "porque.benefit3": "Experience",
+    "porque.benefit4": "Personalized attention",
+    "porque.benefit5": "Flexibility and adaptability",
+    "porque.benefit6": "Transport security",
+    "porque.benefit7": "Cost optimization",
+    "servicios.title": "Our Services",
+    "servicios.description": "At KME INTERNATIONAL we offer comprehensive logistics solutions tailored to your business needs. Our commitment is to accompany you at every stage of the process, ensuring efficiency, traceability, and confidence from origin to final destination. With thousands of successful operations and a global network of partners, your cargo is in expert hands.",
+    "servicios.land_title": "Land Transportation",
+    "servicios.land_text": "Door-to-door solutions with national and international coverage. Includes coordination, tracking, and container insurance.",
+    "servicios.air_title": "Air Transportation",
+    "servicios.air_text": "Your urgent cargo travels with us quickly, securely, and with full visibility. Ideal for time-critical operations.",
+    "servicios.sea_title": "Maritime Transportation",
+    "servicios.sea_text": "We coordinate imports and exports efficiently, including advice on documentation and customs procedures.",
+    "servicios.download_btn": "Download Brochure",
+    "Oficinas":"Global Logistics",
+    "Oficina":"Offices",
+    "Paises":"Countries",
+     "cta.title": "Schedule your Meeting with KME",
+    "cta.description": "Schedule a meeting at any of our offices and receive personalized advice for your transportation and foreign trade needs.",
+    "cta.select_service_label": "Select a service*",
+    "cta.select_service_option": "Select a service",
+    "cta.option_land": "Land Transportation",
+    "cta.option_sea": "Maritime Transportation",
+    "cta.option_air": "Air Transportation",
+    "cta.select_office_label": "Select an office*",
+    "cta.select_office_option": "Select an office",
+    "cta.office_ba": "Buenos Aires (Capital)",
+    "cta.book_button": "Schedule meeting",
+    "contact.offices_title": "Our Offices",
+    "contact.office_ba": "Buenos Aires City",
+    "contact.office_address": "Av. Córdoba 632, 8th Floor, Office A, C1054AAS, Buenos Aires, Argentina",
+    "contact.form_title": "Want to tell us something?",
+    "contact.form_subtitle": "Fill out the form and get in touch with us",
+    "contact.placeholder_name": "Full name",
+    "contact.placeholder_email": "Email",
+    "contact.placeholder_message": "Message",
+    "contact.submit_button": "Send",
+    "footer.description": "Customized international logistics solutions for each client.",
+    "footer.nav_title": "Navigation",
+    "footer.nav_home": "Home",
+    "footer.nav_services": "Services",
+    "footer.nav_about": "About Us",
+    "footer.nav_contact": "Contact",
+    "footer.contact_title": "Contact",
+    "footer.contact_address": "Buenos Aires: Av. Córdoba 632, 8th Floor, Office A, C1054AAS, Buenos Aires, Argentina",
+    "footer.contact_whatsapp": "WhatsApp: +54 9 11 2341-5533",
+    "footer.follow_us": "Follow us",
+    "footer.rights": "&copy; 2025 KME International S.A. All rights reserved."
+  }
+};
+
+function updateLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector("#btn-es").addEventListener("click", () => updateLanguage("es"));
+  document.querySelector("#btn-en").addEventListener("click", () => updateLanguage("en"));
+});

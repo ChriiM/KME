@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" type="image/png" href="/KME/assets/logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <title>Nosotros - Línea de Tiempo</title>
   <style>
     body {
@@ -70,6 +71,17 @@
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .header p {
   font-size: 20px;
   color: #ffffff;
@@ -80,6 +92,7 @@
   font-weight: 300;
   letter-spacing: 1px;
   animation: fadeIn 1.5s ease-out forwards;
+  
 }
 
 
@@ -241,21 +254,76 @@
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(5px); }
+  
+}
+.language-switcher {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 1000;
+    margin-bottom: 40px; /* <--- Espacio extra debajo de las banderas */
+
+}
+
+.language-switcher button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.language-switcher img {
+  width: 32px;
+  height: auto;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.language-switcher img:hover {
+  transform: scale(1.1);
+}
+
+.language-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Espacio antes de la flecha */
+  margin-top: 20px;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 10px;
 }
   </style>
 </head>
 <body>
 
   <div class="header">
-    <img src="/KME/assets/logo.png" alt="Logo de KME International S.A." class="logo" />
-    <h1>Los Fundadores de Nuestra Trayectoria</h1>
-    <p>Explorá el recorrido profesional de nuestros fundadores y descubrí la historia detrás de nuestra visión.</p>
-  </div>
+    <a href="index.html">
+  <img src="/KME/assets/logo.png" alt="Logo de KME International S.A." class="logo" />
+</a>
+    <h1 data-i18n="header_title">Los Fundadores de Nuestra Trayectoria</h1>
+<p data-i18n="header_description">Explorá el recorrido profesional de nuestros fundadores...</p>
 
+<div class="language-container">
+  <div class="language-switcher">
+  <button id="btn-es">
+    <img src="/KMEassets/flag-ar.png" alt="Español" />
+  </button>
+  <button id="btn-en">
+    <img src="/KMEassets/flag-us.png" alt="English" />
+  </button>
+</div>
+</div>
+
+  </div>
   <div class="chevron-wrapper">
   <div class="chevron"></div>
   <div class="chevron"></div>
 </div>
+
 
   <div class="timeline-container">
     <div class="timeline-line"></div>
@@ -267,33 +335,33 @@
     </div>
 
     <div class="timeline-event left">
-      <h3>Inicios - 1962</h3>
-      <p>Nacido en 1962 en Lomas de Zamora, inició su carrera en Ferrocarriles Argentinos en 1983. En 1987 ocupó cargos comerciales y gerenciales en Estin S.A., Conjunto S.A. (como gerente comercial) y en Marítima Buenos Aires.</p>
+      <h3 data-i18n="ernesto_inicio_titulo">Inicios - 1962</h3>
+      <p data-i18n="ernesto_inicio_texto">Nacido en 1962 en Lomas de Zamora, inició su carrera en Ferrocarriles Argentinos en 1983. En 1987 ocupó cargos comerciales y gerenciales en Estin S.A., Conjunto S.A. (como gerente comercial) y en Marítima Buenos Aires.</p>
     </div>
 
     <div class="timeline-event right">
-      <h3>Maersk Argentina</h3>
-      <p>Fue Sales Manager en Maersk Argentina, gerente comercial y gerente de proyectos. Implementó un servicio multimodal a Palpalá con el ferrocarril Belgrano y un proyecto feeder a la Patagonia.</p>
+      <h3 data-i18n="ernesto_inicio_MaerskArgentinaTitulo">Maersk Argentina</h3>
+      <p data-i18n="ernesto_inicio_MaerskArgentina">Fue Sales Manager en Maersk Argentina, gerente comercial y gerente de proyectos. Implementó un servicio multimodal a Palpalá con el ferrocarril Belgrano y un proyecto feeder a la Patagonia.</p>
     </div>
 
     <div class="timeline-event left">
-      <h3>Gestión en Depósitos</h3>
-      <p>Gerente General de SATSA, EMR y de los depósitos de Mar del Plata, Puerto Deseado, Ushuaia y Puerto Madryn.</p>
+      <h3 data-i18n="ernesto_inicio_GestionTitulo">Gestión en Depósitos</h3>
+      <p data-i18n="ernesto_inicio_Gestion" >Gerente General de SATSA, EMR y de los depósitos de Mar del Plata, Puerto Deseado, Ushuaia y Puerto Madryn.</p>
     </div>
 
     <div class="timeline-event right">
       <h3>Maersk Logistics</h3>
-      <p>Integró el directorio de Maersk Argentina S.A., participó en la privatización del puerto de Montevideo y asesoró a Maersk Logistics Venezuela en 2002.</p>
+      <p data-i18n="ernesto_inicio_MaerskLogistics">Integró el directorio de Maersk Argentina S.A., participó en la privatización del puerto de Montevideo y asesoró a Maersk Logistics Venezuela en 2002.</p>
     </div>
 
     <div class="timeline-event left">
       <h3>Triamsa México</h3>
-      <p>En 2003 asumió la Gerencia General de Triamsa (México) como Country Manager. Desarrolló un sistema de visibilidad para transporte terrestre.</p>
+      <p data-i18n="ernesto_inicio_Mexico">En 2003 asumió la Gerencia General de Triamsa (México) como Country Manager. Desarrolló un sistema de visibilidad para transporte terrestre.</p>
     </div>
 
     <div class="timeline-event right">
-      <h3>Actualidad - KME</h3>
-      <p>Fundador de KME INTERNATIONAL. Desde 2010 lidera la empresa y desarrolló el sistema CTS (Container Tracking System).</p>
+      <h3 data-i18n="ernesto_inicio_KmeTitulo">Actualidad - KME</h3>
+      <p data-i18n="ernesto_inicio_KME">Fundador de KME INTERNATIONAL. Desde 2010 lidera la empresa y desarrolló el sistema CTS (Container Tracking System).</p>
     </div>
 
     <!-- KENNETH JOHNSON -->
@@ -303,70 +371,168 @@
     </div>
 
     <div class="timeline-event left">
-      <h3>Inicios - 1954</h3>
-      <p>Nacido en 1954 en Kansas City (EE.UU.), cuenta con más de 30 años de experiencia en la industria marítima, logística y portuaria.</p>
+      <h3 data-i18n="kenneth_inicio_titulo">Inicios - 1954</h3>
+      <p data-i18n="kenneth_inicio_texto">Nacido en 1954 en Kansas City (EE.UU.), cuenta con más de 30 años de experiencia en la industria marítima, logística y portuaria.</p>
     </div>
 
     <div class="timeline-event right">
-      <h3>Experiencia Internacional</h3>
-      <p>Vivió más de 20 años en Sudamérica y Centroamérica, desempeñando roles clave en APM-Maersk.</p>
+      <h3 data-i18n="kenneth_experiencia_titulo">Experiencia Internacional</h3>
+      <p data-i18n="kenneth_experiencia_texto">Vivió más de 20 años en Sudamérica y Centroamérica, desempeñando roles clave en APM-Maersk.</p>
     </div>
 
     <div class="timeline-event left">
-      <h3>Liderazgo Regional</h3>
-      <p>Lideró la expansión del grupo en Chile, Bolivia, Argentina, Uruguay, Paraguay y México. Su visión fue clave para consolidar operaciones en nuevos mercados.</p>
+      <h3 data-i18n="kenneth_experiencia_titulo">Liderazgo Regional</h3>
+      <p data-i18n="kenneth_liderazgo_texto">Lideró la expansión del grupo en Chile, Bolivia, Argentina, Uruguay, Paraguay y México. Su visión fue clave para consolidar operaciones en nuevos mercados.</p>
     </div>
   </div>
 
   <footer class="footer">
   <div class="footer-container">
     <div class="footer-col">
-      <h3>KME International S.A.</h3>
-      <p>Soluciones en logística internacional, personalizadas para cada cliente.</p>
+      <h3 data-i18n="footer_empresa">KME International S.A.</h3>
+      <p data-i18n="footer_mision">Soluciones en logística internacional, personalizadas para cada cliente.</p>
     </div>
 
     <div class="footer-col">
-      <h4>Navegación</h4>
+      <h4 data-i18n="footer_nav">Navegación</h4>
       <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="index.html" data-i18n="footer_nav_inicio">Inicio</a></li>
+        <li><a href="index.html" data-i18n="footer_nav_servicios">Servicios</a></li>
+        <li><a href="nosotros.html" data-i18n="footer_nav_nosotros">Nosotros</a></li>
+        <li><a href="index.html" data-i18n="footer_nav_contacto">Contacto</a></li>
       </ul>
     </div>
-
     <div class="footer-col">
-      <h4>Contacto</h4>
-      <p>Buenos Aires: Av. Córdoba 632, Piso 8 of A C1054AAS Cdad. Autónoma de Buenos Aires</p>
-      <p>Email: info@kmeinternational.com.ar</p>
-      <a href="https://wa.me/5491123415533"><p>Whatsapp: +54 9 11 2341-5533</a></p>
-    </div>
-
+      <h4 style="text-align: center;" data-i18n="footer_seguinos">Seguinos</h4>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="facebook">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="instagram">
+            <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="linkedin">
+            <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://wa.me/5491112345678" target="_blank" class="whatsapp">
+            <i class="fab fa-whatsapp"></i>
+            </a>
+       </div>
+   </div> 
     <div class="footer-col">
-      <h4 style="text-align: center;">Seguinos</h4>
-      <div class="social-icons">
-  <a href="https://facebook.com" target="_blank" class="facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  <a href="https://instagram.com" target="_blank" class="instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://linkedin.com" target="_blank" class="linkedin">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  <a href="https://wa.me/5491112345678" target="_blank" class="whatsapp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-</div>
+      <h4 data-i18n="footer_contacto">Contacto</h4>
+      <p data-i18n="footer_direccion">Buenos Aires: Av. Córdoba 632, Piso 8 of A C1054AAS Cdad. Autónoma de Buenos Aires</p>
+      <p data-i18n="footer_email">Email: info@kmeinternational.com.ar</p>
+      <a href="https://wa.me/5491123415533">
+        <p data-i18n="footer_whatsapp">Whatsapp: +54 9 11 2341-5533</p>
+      </a>
     </div>
   </div>
-
   <div class="footer-bottom">
-    <p>&copy; 2025 KME International S.A. Todos los derechos reservados.</p>
+    <p data-i18n="footer_derechos">&copy; 2025 KME International S.A. Todos los derechos reservados.</p>
   </div>
 </footer>
 
  <script>
+
+
+//TRADUCCION
+
+const translations = {
+  es: {
+    header_title: "Los Fundadores de Nuestra Trayectoria",
+    header_description: "Explorá el recorrido profesional de nuestros fundadores y descubrí la historia detrás de nuestra visión.",
+    ernesto_inicio_texto: "Nacido en 1962 en Lomas de Zamora, comenzó su carrera en Ferrocarriles Argentinos en 1983. En 1987, ocupó cargos comerciales y gerenciales en Estin S.A., Conjunto S.A. (como gerente comercial), y Marítima Buenos Aires.",
+    ernesto_inicio_MaerskArgentinaTitulo: "Maersk Argentina",
+    ernesto_inicio_MaerskArgentina: "Se desempeñó como Gerente de Ventas en Maersk Argentina, ocupando también cargos como gerente comercial y de proyectos. Implementó un servicio multimodal a Palpalá con el ferrocarril Belgrano y un proyecto feeder hacia la Patagonia.",
+    ernesto_inicio_GestionTitulo: "Gestión de Depósitos",
+    ernesto_inicio_Gestion: "Gerente General de SATSA, EMR y depósitos en Mar del Plata, Puerto Deseado, Ushuaia y Puerto Madryn.",
+    ernesto_inicio_MaerskLogistics: "Integró el directorio de Maersk Argentina S.A., participó en la privatización del puerto de Montevideo y asesoró a Maersk Logistics Venezuela en 2002.",
+    ernesto_inicio_Mexico: "En 2003, asumió el cargo de Gerente General de Triamsa (México) como Country Manager. Desarrolló un sistema de visibilidad para el transporte terrestre.",
+    ernesto_inicio_KmeTitulo: "Actualidad - KME",
+    ernesto_inicio_KME: "Fundador de KME INTERNATIONAL. Desde 2010 lidera la empresa y desarrolló el CTS (Container Tracking System).",
+
+    kenneth_inicio_titulo: "Inicios - 1954",
+kenneth_inicio_texto: "Nacido en 1954 en Kansas City (EE.UU.), cuenta con más de 30 años de experiencia en la industria marítima, logística y portuaria.",
+
+kenneth_experiencia_titulo: "Experiencia Internacional",
+kenneth_experiencia_texto: "Vivió más de 20 años en Sudamérica y Centroamérica, desempeñando roles clave en APM-Maersk.",
+
+kenneth_liderazgo_titulo: "Liderazgo Regional",
+kenneth_liderazgo_texto: "Lideró la expansión del grupo en Chile, Bolivia, Argentina, Uruguay, Paraguay y México. Su visión fue clave para consolidar operaciones en nuevos mercados.",
+
+    footer_empresa: "KME International S.A.",
+footer_mision: "Soluciones en logística internacional, personalizadas para cada cliente.",
+footer_nav: "Navegación",
+footer_nav_inicio: "Inicio",
+footer_nav_servicios: "Servicios",
+footer_nav_nosotros: "Nosotros",
+footer_nav_contacto: "Contacto",
+footer_contacto: "Contacto",
+footer_direccion: "Buenos Aires: Av. Córdoba 632, Piso 8 of A C1054AAS Cdad. Autónoma de Buenos Aires",
+footer_email: "Email: info@kmeinternational.com.ar",
+footer_whatsapp: "Whatsapp: +54 9 11 2341-5533",
+footer_derechos: "© 2025 KME International S.A. Todos los derechos reservados.",
+footer_seguinos: "Seguinos",
+
+  },
+  en: {
+    header_title: "The Founders of Our Journey",
+    header_description: "Explore the professional journey of our founders and discover the story behind our vision.",
+    ernesto_inicio_titulo: "Beginnings - 1962",
+    ernesto_inicio_texto: "Born in 1962 in Lomas de Zamora, he began his career at Ferrocarriles Argentinos in 1983. In 1987, he held commercial and managerial positions at Estin S.A., Conjunto S.A. (as commercial manager), and Marítima Buenos Aires.",
+    ernesto_inicio_MaerskArgentinaTitulo: "Maersk Argentina",
+    ernesto_inicio_MaerskArgentina: "He served as Sales Manager at Maersk Argentina, also holding positions as commercial and project manager. He implemented a multimodal service to Palpalá with the Belgrano railway and a feeder project to Patagonia.",
+    ernesto_inicio_GestionTitulo: "Warehouse Management",
+    ernesto_inicio_Gestion: "General Manager of SATSA, EMR, and warehouses in Mar del Plata, Puerto Deseado, Ushuaia, and Puerto Madryn.",
+    ernesto_inicio_MaerskLogistics: "He joined the board of Maersk Argentina S.A., participated in the privatization of the port of Montevideo, and advised Maersk Logistics Venezuela in 2002.",
+    ernesto_inicio_Mexico: "In 2003, he took on the role of General Manager of Triamsa (Mexico) as Country Manager. He developed a visibility system for ground transportation.",
+    ernesto_inicio_KmeTitulo: "Present Day - KME",
+    ernesto_inicio_KME: "Founder of KME INTERNATIONAL. Since 2010, he has led the company and developed the CTS (Container Tracking System).",
+
+    // Kenneth Johnson
+kenneth_inicio_titulo: "Beginnings - 1954",
+kenneth_inicio_texto: "Born in 1954 in Kansas City (USA), he has over 30 years of experience in the maritime, logistics, and port industries.",
+
+kenneth_experiencia_titulo: "International Experience",
+kenneth_experiencia_texto: "He lived for more than 20 years in South and Central America, holding key roles at APM-Maersk.",
+
+kenneth_liderazgo_titulo: "Regional Leadership",
+kenneth_liderazgo_texto: "He led the group's expansion in Chile, Bolivia, Argentina, Uruguay, Paraguay, and Mexico. His vision was key to consolidating operations in new markets.",
+footer_empresa: "KME International S.A.",
+footer_mision: "International logistics solutions, tailored to each client.",
+footer_nav: "Navigation",
+footer_nav_inicio: "Home",
+footer_nav_servicios: "Services",
+footer_nav_nosotros: "About Us",
+footer_nav_contacto: "Contact",
+footer_contacto: "Contact",
+footer_direccion: "Buenos Aires: Av. Córdoba 632, 8th Floor, Office A, C1054AAS, Buenos Aires City",
+footer_email: "Email: info@kmeinternational.com.ar",
+footer_whatsapp: "Whatsapp: +54 9 11 2341-5533",
+footer_derechos: "© 2025 KME International S.A. All rights reserved.",
+footer_seguinos: "Follow Us",
+
+
+  }
+};
+
+function updateLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector("#btn-es").addEventListener("click", () => updateLanguage("es"));
+  document.querySelector("#btn-en").addEventListener("click", () => updateLanguage("en"));
+});
+
+
+
   const events = document.querySelectorAll('.timeline-event');
   let lastScrollTop = 0;
 
