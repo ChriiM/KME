@@ -33,7 +33,7 @@
       <ul class="nav-links">
         <a href="#servicios"class="cta-button2 nav-quote-desktop2">Servicios</a>
         <a href="#por-que" class="cta-button3 nav-quote-desktop3">¿Por qué elegirnos?</a>
-        <a href="#clientes" class="cta-button4 nav-quote-desktop4">Nosotros</a>
+        <a href="nosotros.html" class="cta-button4 nav-quote-desktop4">Nosotros</a>
         <a href="#contacto" class="cta-button5 nav-quote-desktop5">Contacto</a>
         <a href="#contacto" class="cta-button nav-quote-desktop">Solicitar cotización</a> 
       </ul>
@@ -99,7 +99,7 @@
        <!-- VIDEO BACKGROUND AISLADO -->
   <div class="video-servicios-wrapper">
     <video class="video-servicios" autoplay muted loop playsinline>
-      <source src="/KME/assets/servicios.mp4" type="video/mp4" />
+      <source src="assets/servicios.mp4" type="video/mp4" />
       Tu navegador no soporta el video.
     </video>
     <div class="video-servicios-overlay"></div>
@@ -147,7 +147,17 @@
     </div>
   </section>
 
-  <section id="oficinas-kme" style="height: 700px; width: 100%; background-color: rgb(41, 41, 41);" data-aos="fade-up">
+  <section id="oficinas-kme" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('KME/assets/mapa.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  height: 100%;
+  width: 100%;
+  " data-aos="fade-up">
+
     <h2 style="color:white; font-size: 2.8rem;
   margin-bottom: 20px;
   text-shadow: 
@@ -155,10 +165,24 @@
     0 0 10px #ff6f00,
     0 0 20px #ffa726,
     0 0 30px #ff8c00;">OFICINAS GLOBALES</h2>
-  <div id="mapa-kme" style="height: 100%; width: 100%;"></div>
+    
+  <div id="mapa-kme" style=" height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 4px solid #ff6f00;
+  border-bottom: 4px solid #ff6f00;
+  background-color: #000;
+  width: 1500px;
+  height: 800px;
+  box-shadow: 0 0 15px rgba(255, 111, 0, 0.6);
+  border-radius: 12px;
+  position: relative;"></div>
+
 
  <div class="ofe">
-  <img src="/KME/assets/pattern.jpg" alt="Logo de KME International S.A." class="logo" />
+  <img src="assets/pattern.jpg" alt="Logo de KME International S.A." class="logo" />
   <div class="ofe-overlay">
     <div class="stat">
       <i class="fas fa-globe-americas icon"></i>

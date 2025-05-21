@@ -28,16 +28,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
  document.addEventListener("DOMContentLoaded", function () {
     const argentinaCoords = [-34.59846860118958, -58.37577445862274];
+    
 
-    const map = L.map('mapa-kme', {
-    zoomControl: false,
-    worldCopyJump: true
-  }).setView(argentinaCoords, 3);
+    // Crear el mapa
+const map = L.map('mapa-kme', {
+  center: argentinaCoords,
+  zoom: 3,
+  scrollWheelZoom: false, // Bloquear scroll del mouse
+    zoomControl: false, // <<<< DESACTIVAR los controles por defecto
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap',
-    maxZoom: 18
-  }).addTo(map);
+  worldCopyJump: true
+});
+
+
+// Añadir capa base
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors',
+  maxZoom: 18
+}).addTo(map);
+
+// Añadir solo UNA VEZ los controles de zoom
+L.control.zoom({
+  position: 'topright'
+}).addTo(map);
+
+  // Corregir tamaño si el mapa aparece más tarde
+  setTimeout(() => {
+    map.invalidateSize();
+  }, 300);
+
+  function panMap(x, y) {
+  // 'map' es tu objeto Leaflet
+  map.panBy([x, y], {animate: true});
+}
+    
 
   const markerArgentina = L.marker(argentinaCoords).addTo(map);
 

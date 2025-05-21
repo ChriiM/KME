@@ -654,7 +654,7 @@ h2 {
   background-position: center center;
   padding: 80px 20px;
   color: white;
-  margin-top: 300px;
+  
   background-color: #333;
 }
 
@@ -1117,9 +1117,28 @@ form button:hover {
 }
 
 #mapa-kme {
-    border-top: 4px solid #ff6f00;
-    border-bottom: 4px solid #ff6f00;
-  }
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 4px solid #ff6f00;
+  border-bottom: 4px solid #ff6f00;
+}
+
+#map-container {
+  width: 600px;
+  height: 600px;
+    max-width: 90vw;
+    max-height: 90vw;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
 
   .leaflet-popup-content-wrapper {
     background: #333 !important;
@@ -1187,3 +1206,61 @@ form button:hover {
   margin-top: 5px;
 }
 
+/* Contenedor joystick */
+.pan-buttons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 140px;
+  height: 140px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff6f00;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  user-select: none;
+  z-index: 9999; /* para que esté arriba del mapa */
+}
+
+/* Botones redondos */
+.pan-buttons button {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background-color: #ff6f00;
+  border: none;
+  border-radius: 50%;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pan-buttons button:hover {
+  background-color: #ffa726;
+}
+
+/* Organizar botones para formar la cruz (joystick) */
+.pan-buttons > button:nth-child(1) { /* ↑ */
+  order: 1;
+  margin-bottom: 15px;
+}
+
+.pan-buttons > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  order: 2;
+}
+
+.pan-buttons > div > button {
+  margin: 0 10px;
+}
+
+.pan-buttons > button:nth-child(4) { /* ↓ */
+  order: 3;
+  margin-top: 15px;
+}
